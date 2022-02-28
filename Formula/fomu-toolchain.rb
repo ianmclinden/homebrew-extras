@@ -2,8 +2,8 @@ class FomuToolchain < Formula
   desc "A collection of tools for developing for Fomu"
   homepage "https://github.com/im-tomu/fomu-toolchain"
   head "https://github.com/im-tomu/fomu-toolchain.git"
-  url "https://github.com/im-tomu/fomu-toolchain/releases/download/v1.5.6/fomu-toolchain-macos-v1.5.6.zip"
-  sha256 "17f543c4140063a7a6eb2e7712d5b42c10206f30f542b29343aad314fccac491"
+  url "https://github.com/im-tomu/fomu-toolchain/releases/download/v1.6/fomu-toolchain-macOS.zip"
+  sha256 "fffee66b044aed4862252239413fc7250d092d205fb20bda78b671c3e09f691e"
   license "MIT"
 
   option "with-python", "Install python3 from fomu-toolchain"
@@ -16,7 +16,7 @@ class FomuToolchain < Formula
     if not build.with? "make"
       # TODO
     end
-    prefix.install "include", "lib", "riscv64-unknown-elf", "bin", "info", "libexec", "share"
+    prefix.install "include", "lib", "riscv64-unknown-elf", "bin", "libexec", "share"
   end
 
   test do
