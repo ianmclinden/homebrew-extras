@@ -3,8 +3,8 @@ class Himbsay < Formula
   homepage "https://github.com/ianmclinden/himbsay"
   head "https://github.com/ianmclinden/himbsay.git", branch:"main"
   url "https://github.com/ianmclinden/himbsay.git",
-    tag:      "v0.5.0",
-    revision: "42d40a85037e3131aa99e1e571560dca7109c927"
+    tag:      "v0.6.0",
+    revision: "fe56ddde5a2b56c19629da9bae04319d9f62f217"
   license "MIT"
   
   depends_on "go" => :build
