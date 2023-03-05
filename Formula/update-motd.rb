@@ -3,8 +3,8 @@ class UpdateMotd < Formula
   homepage "https://github.com/ianmclinden/motd-rs"
   head "https://github.com/ianmclinden/motd-rs.git", branch:"main"
   url "https://github.com/ianmclinden/motd-rs.git",
-    tag:      "0.1.0",
-    revision: "9318cd6aa9cf0b2fa956308b2219c320b33fce1c"
+    tag:      "0.2.1",
+    revision: "e452b17fdcf75b632f55296ab71f81f5850c3c3d"
   license "GPL-3.0-or-later"
 
   depends_on "rust" => :build
@@ -16,6 +16,11 @@ class UpdateMotd < Formula
     ENV["PREFIX"] = "#{HOMEBREW_PREFIX}"
     
     system "cargo", "install", *std_cargo_args
+
+    # macOS specific tools
+    on_macos do
+      system "cargo", "install", "--locked", "--root", prefix, "--path", "tools/macOS"
+    end
 
     (etc/"update-motd.d").mkpath
     on_macos do
@@ -31,8 +36,18 @@ class UpdateMotd < Formula
     EOS
   end
 
+  service do
+    if OS.mac?
+      run [opt_bin/"update-notifier"]
+      run_type :interval
+      interval 900
+      environment_variables PATH: std_service_path_env
+    end
+  end
+  
   test do
     system "motd", "--path"
     system "test", "-d", "#{etc}/update-motd.d"
+    system "update-notifier", "--stamp"
   end
 end
