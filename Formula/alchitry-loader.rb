@@ -2,7 +2,7 @@ class AlchitryLoader < Formula
   desc "Command-line loader program for the Au and Cu"
   homepage "https://alchitry.com/pages/alchitry-loader"
   url "https://github.com/ianmclinden/alchitry-loader.git",
-    tag: "4263e3925b611626e503ae452e430ad42680157e"
+    revision: "4263e3925b611626e503ae452e430ad42680157e"
   version "1.0.0"
   license "MIT"
   head "https://github.com/ianmclinden/alchitry-loader.git", branch: "main"
