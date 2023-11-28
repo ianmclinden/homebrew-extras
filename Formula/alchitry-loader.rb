@@ -1,18 +1,23 @@
 class AlchitryLoader < Formula
-  desc "Command line loader program for the Au and Cu"
+  desc "Command-line loader program for the Au and Cu"
   homepage "https://alchitry.com/pages/alchitry-loader"
-  license "MIT"
-  head "https://github.com/ianmclinden/alchitry-loader.git"
   url "https://github.com/ianmclinden/alchitry-loader.git",
-    revision: "220c2edbfefd44074a28f3d539752569e7396352"
+    tag: "4263e3925b611626e503ae452e430ad42680157e"
   version "1.0.0"
+  license "MIT"
+  head "https://github.com/ianmclinden/alchitry-loader.git", branch: "main"
+
+  depends_on "cmake" => :build
 
   def install
-    system "make"
-    bin.install "build/alchitry-loader"
+    mkdir "build" do
+      system "cmake", ".."
+      system "make"
+      bin.install "alchitry-loader"
+    end
   end
 
   test do
-    system "alchitry-loader", "--version"
+    system "#{bin}/alchitry-loader", "-h"
   end
 end
