@@ -1,6 +1,6 @@
 class Picorng < Formula
   desc "Command line utility for the PICoRNG USB random number generator"
-  homepage "https://alchitry.com/pages/alchitry-loader"
+  homepage "https://shop.sudomaker.com/products/picorng-random-number-generator"
   license "AGPLv3"
   head "https://github.com/SudoMaker/PICoRNG.git"
   url "https://github.com/SudoMaker/PICoRNG.git",
