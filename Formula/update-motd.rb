@@ -3,8 +3,8 @@ class UpdateMotd < Formula
   homepage "https://github.com/ianmclinden/motd-rs"
   head "https://github.com/ianmclinden/motd-rs.git", branch:"main"
   url "https://github.com/ianmclinden/motd-rs.git",
-    tag:      "0.2.2",
-    revision: "710cdefd37afea66389ebbfb767b1ea05e702b8b"
+    tag:      "0.2.3",
+    revision: "324330aaa8adac587805889a195283a423294685"
   license "GPL-3.0-or-later"
 
   depends_on "rust" => :build
