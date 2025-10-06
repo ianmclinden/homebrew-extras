@@ -2,8 +2,8 @@ class RocketNotify < Formula
   desc "Simple command-line client to send messages to Rocket.Chat"
   homepage "https://github.com/ianmclinden/rocket-notify"
   url "https://github.com/ianmclinden/rocket-notify.git",
-    tag:      "v1.1.0",
-    revision: "fe643869a8b18f146119de238e210c3a0d07b010"
+    tag:      "1.2.0",
+    revision: "5d6f3e57d84122749ff10df3bdb30d04cfa98fa9"
   license "MIT"
   head "https://github.com/ianmclinden/rocket-notify.git", branch: "main"
 
