@@ -4,7 +4,7 @@ class UpdateMotd < Formula
   head "https://github.com/ianmclinden/motd-rs.git", branch:"main"
   url "https://github.com/ianmclinden/motd-rs.git",
     tag:      "0.3.0",
-    revision: "130cdea5fe3ea3b68ec9963b55026d0e4a912be6"
+    revision: "551fb687162ac46434e45ca503e118155edc26d0"
   license "GPL-3.0-or-later"
 
   depends_on "rust" => :build
