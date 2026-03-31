@@ -1,8 +1,9 @@
 class Vasm < Formula
   desc "Portable and retargetable assembler"
   homepage "http://sun.hasenbraten.de/vasm/index.php"
-  url "http://phoenix.owl.de/tags/vasm2_0.tar.gz"
-  sha256 "210334b0326d54dfd21fe6c065ceca990a6b5da762d59c6c0f9d8c3e5f6a6093"
+  url "http://phoenix.owl.de/tags/vasm2_0e.tar.gz"
+  version "2.0e"
+  sha256 "c73702574e8d6a154a7d64f22d7b618d0b85ace98ec9eb63d5e7c5ec696e3a6b"
   license ""
 
   option "without-6502", "Don't install the 6502 CPU module"
